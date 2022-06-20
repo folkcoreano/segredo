@@ -1,0 +1,1 @@
+import{b as e,o as t,c as o,a as s}from"./index.c08f0506.js";const a=s("h1",null,"TV",-1),c=[a],p={__name:"tv",setup(n){return e().newPageTitle("TV"),(_,l)=>(t(),o("div",null,c))}};export{p as default};
