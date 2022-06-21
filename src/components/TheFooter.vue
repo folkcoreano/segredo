@@ -2,31 +2,31 @@
   <nav>
     <router-link to="/tv">
       <div class="itembot">
-        <Icon class="iconbot" icon="mdi:television-classic" />
+        <Icon class="iconbot" icon="ic:baseline-ondemand-video" />
         <span class="textbot">TV</span>
       </div>
     </router-link>
     <router-link to="/audios">
       <div class="itembot">
-        <Icon class="iconbot" icon="ic:sharp-library-music" />
+        <Icon class="iconbot" icon="ic:baseline-equalizer" />
         <span class="textbot">Audios</span>
       </div>
     </router-link>
     <router-link to="/">
       <div class="itembot">
-        <Icon class="iconbot" icon="gridicons:house" />
+        <Icon class="iconbot" icon="ic:baseline-home" />
         <span class="textbot">Home</span>
       </div>
     </router-link>
     <router-link to="/books">
       <div class="itembot">
-        <Icon class="iconbot" icon="ph:books-fill" />
+        <Icon class="iconbot" icon="ic:baseline-collections-bookmark" />
         <span class="textbot">Books</span>
       </div>
     </router-link>
     <router-link to="/comics">
       <div class="itembot">
-        <Icon class="iconbot" icon="bx:book-bookmark" />
+        <Icon class="iconbot" icon="ic:baseline-collections" />
         <span class="textbot">Comics</span>
       </div>
     </router-link>
@@ -37,7 +37,7 @@
 import { Icon } from "@iconify/vue";
 </script>
 
-<style>
+<style scoped>
 nav {
   display: flex;
   width: 100%;
@@ -47,9 +47,7 @@ nav {
   gap: 0.5em;
   align-items: center;
 }
-
 .itembot {
-  background-color: blueviolet;
   display: flex;
 
   border-radius: 100vh;
@@ -57,34 +55,28 @@ nav {
   padding: 0.2em;
   gap: 0em;
 }
-
 .textbot {
   display: none;
 }
-
 .iconbot {
-  font-size: 2em;
+  font-size: 2.5em;
 }
-
 a,
 a:visited {
   text-decoration: none;
-  color: var(--white);
+  color: #626262;
   cursor: pointer;
   transition: all 150ms linear;
 }
-
 a:hover {
   transform: translateX(0.5em);
   color: var(--red);
 }
-
 a.router-link-active {
   transform: scale(1.1);
 
   color: var(--yellow);
 }
-
 @media (min-width: 300px) {
   nav {
     justify-content: space-around;
@@ -99,19 +91,19 @@ a.router-link-active {
   }
   .textbot {
     display: flex;
+    display: none;
     font-size: 0.8em;
   }
   .iconbot {
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
   a:hover {
     transform: translateY(-0.3em);
   }
   a.router-link-active {
-    transform: translateY(-0.2em) scale(1.1);
+    transform: translateY(-0.2em);
   }
 }
-
 @media (min-width: 550px) {
   nav {
     justify-content: center;
@@ -128,7 +120,7 @@ a.router-link-active {
     font-size: 1em;
   }
   .iconbot {
-    font-size: 2em;
+    font-size: 2.5em;
   }
   a:hover {
     transform: translateX(0.3em);
@@ -143,10 +135,10 @@ a.router-link-active {
     gap: 0.5em;
   }
   .textbot {
-    display: flex;
+    /* display: flex; */
   }
   .iconbot {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
   }
 }
 </style>

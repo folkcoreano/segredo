@@ -1,12 +1,23 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <Stories />
+    <br />
+    <br />
+    <Contents />
+    <br />
+    <Contents />
+    <br />
+    <Contents />
+    <br />
+    <Contents />
   </div>
 </template>
 <script setup>
 import { ref, onMounted, computed, watch } from "vue";
 
 import { changeTitle } from "../stores/title";
+import Stories from "../components/Stories.vue";
+import Contents from "../components/Contents.vue";
 
 const store = changeTitle();
 

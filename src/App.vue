@@ -22,11 +22,6 @@ import TheFooter from "./components/TheFooter.vue";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -34,11 +29,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--blacka);
+  background: #333;
+  border-radius: 100vh;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
+  background: #626262;
+  border-radius: 100vh;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -55,17 +52,22 @@ html {
   --white: hsla(0, 0%, 100%, 1);
 }
 
+html,
 body {
-  background-color: var(--violet);
-  color: var(--black);
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
 
   display: grid;
 
   grid-template-columns: 1fr;
 
-  height: 100vh;
-
-  font-size: 12px;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
 }
 
 #app {
@@ -84,7 +86,7 @@ header {
   grid-column: 1 / 3;
   grid-row: 1;
 
-  background-color: aqua;
+  background-color: #161616;
 }
 
 main {
@@ -93,16 +95,18 @@ main {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
 
-  background-color: antiquewhite;
+  background-color: #000;
 
   overflow: auto;
+
+  padding: 0.5em;
 }
 
 footer {
   grid-column: 1 / 3;
   grid-row: 3;
 
-  background-color: brown;
+  background-color: #161616;
 }
 
 .route-enter-from {
@@ -122,11 +126,11 @@ footer {
 }
 @media (min-width: 300px) {
   body {
-    font-size: 13px;
+    font-size: 14px;
   }
   #app {
-    grid-template-columns: 8em 1fr;
-    grid-template-rows: 4em 1fr 4em;
+    grid-template-columns: 4em 1fr;
+    grid-template-rows: 4.5em 1fr 4.5em;
   }
   main {
     grid-column: 1 / 4;
@@ -159,13 +163,13 @@ footer {
     font-size: 14px;
   }
   #app {
-    grid-template-columns: 7.5em 1fr;
+    grid-template-columns: 4em 1fr;
   }
 }
 @media (min-width: 992px) {
   body {
     grid-template-columns: 0.5fr 10fr 0.5fr;
-    font-size: 14px;
+    font-size: 16px;
   }
   #app {
     grid-column: 2;

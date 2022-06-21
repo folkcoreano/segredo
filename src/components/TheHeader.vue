@@ -6,22 +6,29 @@
   <div class="headnav">
     <router-link to="/profile">
       <div class="itemtop">
-        <Icon class="icontop" icon="bi:person-circle" />
+        <Icon class="icontop" icon="ic:baseline-person" />
         <span class="nametop">Profile</span>
       </div>
     </router-link>
-
-    <div class="itemtop">LetterWHO</div>
-    <router-link to="/search">
-      <div class="itemtop">
-        <Icon
-          class="icontop"
-          icon="bi:search-heart-fill"
-          :horizontalFlip="true"
-        />
-        <span class="nametop">Search</span>
+    <div class="itemtop">
+      <img class="logo" src="../assets/logo.svg" alt="Logo" />
+    </div>
+    <div class="itemtop">
+      <div class="group">
+        <div class="groupitem">
+          <router-link to="/search">
+            <div class="itemtop">
+              <Icon class="icontop" icon="ic:baseline-search" />
+              <span class="nametop">Search</span>
+            </div>
+          </router-link>
+        </div>
+        <div class="groupitem">
+          <Icon class="icontop" icon="ic:baseline-menu" color="#626262" />
+          <span class="nametop">Menu</span>
+        </div>
       </div>
-    </router-link>
+    </div>
   </div>
 </template>
 
@@ -51,22 +58,34 @@ const store = changeTitle();
   font-size: 2em;
 }
 .nametop {
-  /* display: none; */
+  display: none;
   font-size: 1.1em;
 }
+.logo {
+  height: 2em;
+}
 
-a {
-  color: var(--black);
+.group {
+  display: flex;
+  gap: 0.5em;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #626262;
+  cursor: pointer;
+  transition: all 150ms linear;
 }
 
 a:hover {
   transform: scale(1.1);
-  color: var(--yellow);
+  color: var(--red);
 }
 
 a.router-link-active {
   transform: scale(1.1);
 
-  color: var(--red);
+  color: var(--yellow);
 }
 </style>
